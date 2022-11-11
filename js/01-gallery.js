@@ -22,10 +22,8 @@ function openImg(event) {
     return;
   }
   modalEl = basicLightbox.create(`
-    <div class="modal">
-        <img src=${event.target.dataset.source} width="80%" style="margin: auto; display: block"> 
-    </div>
-`);
+  <img src=${event.target.dataset.source} alt="${event.target.alt}"> 
+  `);
   modalEl.show();
   document.addEventListener("keydown", closeModal);
 }
